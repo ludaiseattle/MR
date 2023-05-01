@@ -10,8 +10,8 @@ def index():
     output_text = ''
     if request.method == 'POST':
         input_text = request.form['input_text']
-        history.append(input_text+"\n")
-        output_text = ''.join(history)
+        history.append(input_text)
+        output_text = '<br>'.join(history) + '<br>'
     return render_template('index.html', input_text=input_text, output_text=output_text)
 
 if __name__ == '__main__':
