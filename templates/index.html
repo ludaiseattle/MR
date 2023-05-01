@@ -24,8 +24,10 @@
       </form>
     </div>
     <div>
-      <p>Output:</p>
-      <p>{{ output_text|safe }}</p>
+      <p>History:</p>
+      {% for item in get_history() %}
+        <p>{{ item|safe }}</p>
+      {% endfor %}
     </div>
   </body>
 </html>
