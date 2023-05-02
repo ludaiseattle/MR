@@ -7,6 +7,10 @@
       #input_text {
         width: 500px;
         height: 200px;
+	word-wrap:break-world;
+      }
+      p {
+	word-wrap:break-world;
       }
     </style>
   </head>
@@ -18,7 +22,7 @@
         <br>
         <label for="input_text">Input:</label>
         <br>
-        <input type="text" id="input_text" name="input_text">
+	<textarea type="text" id="input_text" name="input_text"></textarea>
         <br>
         <button type="submit">Submit</button>
       </form>
@@ -26,7 +30,7 @@
     <div>
       <p>History:</p>
       {% for item in get_history() %}
-        <p>{{ item|safe }}</p>
+      <p>{{ item|safe }}</p>
       {% endfor %}
     </div>
   </body>

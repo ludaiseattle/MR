@@ -6,7 +6,10 @@ app = Flask("Novelist")
 history = []
 emails = []
 
-history.append("1111111")
+history.append("It was an evening in 1870, and in front of you was the famous Red Square. \
+        A bonfire was burning in the middle of Red Square, and people \
+        from all around the world were sitting by the fire. \
+        There were merchants, explorers, killers, and lumberjack, each with a story to tell...")
 
 def send_email(subject, message, from_email, to_email):
     server = smtplib.SMTP('smtp.office365.com', 587)
